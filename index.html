@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Profile Button</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f2f2f2;
+        }
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 20px;
+            text-align: center;
+        }
+        main {
+            padding: 20px;
+            margin: 20px;
+            background-color: #fff;
+            text-align: center;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .profile-container {
+            display: none;
+            border: 1px solid #ddd;
+            padding: 10px;
+            margin: 10px auto;
+            max-width: 300px;
+            background-color: #f9f9f9;
+            border-radius: 5px;
+        }
+        .profile-container img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 50%;
+            margin-bottom: 10px;
+            border: 3px solid #333;
+        }
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin-bottom: 20px;
+            cursor: pointer;
+            border: none;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+    <script>
+        function toggleProfile() {
+            var profileContainer = document.getElementById("profile-container");
+            if (profileContainer.style.display === "none") {
+                profileContainer.style.display = "block";
+            } else {
+                profileContainer.style.display = "none";
+            }
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <h1>Profile Button Example</h1>
+    </header>
+    <main>
+        <p>Welcome to our website!</p>
+        <button onclick="toggleProfile()">View Profile</button>
+        <div class="profile-container" id="profile-container">
+            <h2>User Profile</h2>
+            <img src="profile-picture.jpg" alt="Profile Picture">
+            <p>Username: CarloBaron123</p>
+            <p>Email: baronpogi@example.com</p>
+            <p>Location: Philippines</p>
+            <p>Interests: Programming</p>
+            <textarea rows="4" cols="50" placeholder="Enter your text here"></textarea>
+        </div>
+    </main>
+</body>
+</html>
